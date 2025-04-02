@@ -3,7 +3,7 @@ name: terraform deploye
 on:
   push:
     branches:
-        master:
+       - master
 
 
 jobs:
