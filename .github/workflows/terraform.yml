@@ -11,16 +11,16 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:
-          - name: Checkout repositoty
+          - name: Checkout repositoty    #for downloading code
             uses: actions/checkout@v4
-          - name: configure the aws credentials
+          - name: configure the aws credentials     #for login the AWS 
             uses: aws-actions/configure-aws-credentials@v2
             with:
                 aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                 aws-seceret-access-key: ${{ secrets.AWS_SECRET_ACESS_KEY }}
                 region: "us-east-1"
           - name: install terraform
-            uses: hashicorp/setup-terraform@v3
+            uses: hashicorp/setup-terraform@v3        #for installing the terraform 
 
           - name: terraform init
             run: terraform init
